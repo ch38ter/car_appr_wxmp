@@ -17,4 +17,3 @@ router.post(getRealUrl('/add'), (ctx)=> {
 
 module.exports = router
 
-const abc = 'abc'
