@@ -1,0 +1,12 @@
+<!--pages/home/manage.wxml-->
+<text>用户情况</text>
+<view wx:for="{{userlist}}" wx:key="item" style="border:1px; border-color:#000000;border-style:solid">
+<view><text>用户ID:</text><text style="color: red;">{{item.id}}</text></view>
+<view><text>微信OpenID:</text><text style="color: red;">{{item.wx_openid}}</text></view>
+<view><text>首次登录时间:</text><text style="color: red;">{{item.create_time}}</text></view>
+<view><text>上次登录时间:</text><text style="color: red;">{{item.lastlogin_time}}</text></view>
+<view><text>姓名:</text><input id="{{item.id}}" bindinput="namechange" value="{{item.name}}"/></view>
+<view><text>权限:</text><input id="{{item.id}}" bindinput="authchange" value="{{item.authority}}"/></view>
+
+<view><button id="{{item.id}}" bind:tap="edituser">修改</button></view>
+</view>

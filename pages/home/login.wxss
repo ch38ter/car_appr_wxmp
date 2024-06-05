@@ -1,0 +1,27 @@
+/* pages/home/login.wxss */
+.title-text {
+	position : relative;
+	font-family : serif;
+	font-size : xx-large;
+	font-weight : bold;
+	text-align : center;
+	background-color : #fd0909;
+	top : 1em;
+}
+
+/* .img {
+  border-radius: 50%;
+  display: block;
+  width: 128px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.img {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.imgview{
+  width: 400rpx;
+  height: 400rpx;
+}

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/home/login",
+    "pages/home/appr",
+    "pages/home/his",
+    "pages/home/my",
+    "pages/home/manage"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff0000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "信息化事业部用车申请"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "custom": false,
+    "color": "#00ff00",
+    "selectedColor": "#ff0000",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "list": [
+      {
+        "text": "申请",
+        "iconPath": "pages/components/icon/order.png",
+        "pagePath": "pages/home/appr",
+        "selectedIconPath": "pages/components/icon/order_s.png"
+      },
+      {
+        "text": "历史",
+        "iconPath": "pages/components/icon/record.png",
+        "pagePath": "pages/home/his",
+        "selectedIconPath": "pages/components/icon/record_s.png"
+      },
+      {
+        "text": "我的",
+        "iconPath": "pages/components/icon/user.png",
+        "pagePath": "pages/home/my",
+        "selectedIconPath": "pages/components/icon/user_s.png"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  }
+}

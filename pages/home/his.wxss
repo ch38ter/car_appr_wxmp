@@ -1,0 +1,50 @@
+/* pages/home/his.wxss */
+.fui-item__box {
+	width: 100%;
+	padding: 26rpx 32rpx;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+
+.fui-logo {
+	width: 48rpx;
+	height: 48rpx;
+	margin-right: 24rpx;
+	display: block;
+}
+
+.fui-descr {
+	width: 100%;
+	padding: 32rpx;
+	font-size: 28rpx;
+	line-height: 52rpx;
+	color: #7F7F7F;
+	word-break: break-all;
+	box-sizing: border-box;
+}
+
+.itemhead{
+  border-width : 1px;
+	border-style : solid;
+	border-top-color : #7f7f7f;
+	border-bottom-color : #1f11dd;
+	color : #f80e0e;
+	font-weight : bold;
+	font-size : large;
+}
+.weui-input{
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-left: 10px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+	align-items: center;
+	font-size: 30rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #686868;
+}

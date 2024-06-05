@@ -1,0 +1,95 @@
+
+<view class="box">
+  <fui-section title="申请部门" size="40" isLine></fui-section>
+  <fui-dropdown-menu size="{{28}}" selectedColor="#465CFF" options="{{options_depart}}" bindclick="rangeItemClick_depart" bindclose="rangeClose_depart" id="ddmRange_depart" left="50" padding="20">
+    <view class="fui-filter__item" bindtap="filterTap_depart">
+      <text>{{range_depart}}</text>
+      
+      <view class="fui-filter__icon {{rangeShow_depart?'fui-icon__ani':''}}">
+        <fui-icon name="turningdown" size="50"></fui-icon>
+      </view>
+    </view>
+  </fui-dropdown-menu>
+</view>
+
+<view class="box">
+<fui-section title="申请人" size="40" isLine></fui-section>
+<input class="weui-input" name="input" placeholder="输入申请人" bindinput='inputApplicant' />
+</view>
+
+<view class="box">
+<fui-section title="用车事由" size="40" isLine></fui-section>
+<input class="weui-input" name="input" placeholder="输入用车事由" bindinput='inputReason'/>
+</view>
+
+<view class="box">
+<fui-section title="同行人员" size="40" isLine></fui-section>
+<input class="weui-input" name="input" placeholder="同行人员单位和姓名" bindinput='inputCompanions'/>
+</view>
+
+<!-- <view class="box">
+  <fui-section title="用车时间" size="40" isLine></fui-section>
+  <view class="weui-input2">
+    <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+      <view>
+        起: {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+      </view>
+    </picker>
+    <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+      <view>
+        止: {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+      </view>
+    </picker>
+  </view> 
+</view> -->
+
+<view class="box">
+  <fui-section title="用车时间" size="40" isLine></fui-section>
+  <view class="weui-input2">
+    <view class="datetimeselector">
+      <picker mode="date" class="date" bindchange="startDateChange">
+        起：{{start_time.year}}-{{start_time.month}}-{{start_time.day}}
+      </picker>
+      <picker mode="selector" range="{{hourrange}}" value="{{start_time.hour}}" class="hour" bindchange="startHourChange">
+        {{start_time.hour}}时
+      </picker>
+    </view>
+    <view class="datetimeselector">
+      <picker mode="date" class="date" bindchange="endDateChange">
+        止：{{end_time.year}}-{{end_time.month}}-{{end_time.day}}
+      </picker>
+      <picker mode="selector" range="{{hourrange}}" value="{{end_time.hour}}" class="hour" bindchange="endHourChange">
+        {{end_time.hour}}时
+      </picker>
+    </view>
+  </view> 
+</view>
+
+<view class="box">
+<fui-section title="审批人" size="40" isLine></fui-section>
+  <fui-dropdown-menu size="{{28}}" selectedColor="#465CFF" options="{{options_approver}}" bindclick="rangeItemClick_approver" bindclose="rangeClose_approver" id="ddmRange_approver"  left="50" padding="20">
+	  <view class="fui-filter__item" bindtap="filterTap_approver">
+    <text>{{range_approver}}</text>
+		<view class="fui-filter__icon {{rangeShow_approver?'fui-icon__ani':''}}">
+		  <fui-icon name="turningdown" size="50"></fui-icon>
+		</view>
+	  </view>
+</fui-dropdown-menu>
+</view>
+
+<view class="box">
+<fui-section title="抄送人" size="40" isLine></fui-section>
+  <fui-dropdown-menu size="{{28}}" selectedColor="#465CFF" options="{{options_cc}}" bindclick="rangeItemClick_cc" bindclose="rangeClose_cc" id="ddmRange_cc"  left="50" padding="20" direction="up">
+	  <view class="fui-filter__item" bindtap="filterTap_cc">
+    <text>{{range_cc}}</text>
+		<view class="fui-filter__icon {{rangeShow_cc?'fui-icon__ani':''}}">
+		  <fui-icon name="turningdown" size="50"></fui-icon>
+		</view>
+	  </view>
+</fui-dropdown-menu>
+</view>
+
+
+<view style="margin-top: 20px; margin-bottom: 20px;">
+<button type="primary" bind:tap="summitappr">提交</button>
+</view>

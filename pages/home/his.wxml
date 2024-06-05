@@ -1,0 +1,29 @@
+
+<fui-tabs tabs="{{yearlist}}" current="{{toptabcurrent}}" bindchange="change" short="{{false}}">
+</fui-tabs>
+
+
+<fui-collapse-item wx:for="{{list}}" wx:key="item">
+
+<view class="fui-item__box">
+<image src="../components/icon/tj.png" class="fui-logo" wx:if="{{item.statusnum==0}}"></image>
+<image src="../components/icon/ch.png" class="fui-logo" wx:elif="{{item.statusnum==1}}"></image>
+<image src="../components/icon/ty.png" class="fui-logo" wx:elif="{{item.statusnum==2}}"></image>
+<image src="../components/icon/jj.png" class="fui-logo" wx:elif="{{item.statusnum==3}}"></image>
+<image src="../components/icon/gb.png" class="fui-logo" wx:else></image>
+<text>{{item.summitdate}}</text>
+</view>
+
+<view class="fui-descr" slot="content">
+    <view class="weui-input"><text style="width: 100px; text-align: right;">申请时间：</text><text style="width: 240px;">{{item.summittime}}</text></view>
+    <view class="weui-input"><text style="width: 100px; text-align: right;">用车时间：</text><text style="width: 240px;">{{item.time}}</text></view>
+    <view class="weui-input"><text style="width: 100px; text-align: right;">申请人：</text><text style="width: 240px;">{{item.name}}</text></view>
+    <view class="weui-input"><text style="width: 100px; text-align: right;">同行人：</text><text style="width: 240px;">{{item.comm}}</text></view>
+    <view class="weui-input"><text style="width: 100px; text-align: right;">批准时间：</text><text style="width: 240px;">{{item.apprtime}}</text></view>
+    <view class="weui-input"><text style="width: 100px; text-align: right;">批准人：</text><text style="width: 240px;">{{item.approver}}</text></view>
+    <view class="weui-input"><text style="width: 100px; text-align: right;">用车事由：</text><text style="width: 240px;">{{item.reason}}</text></view>
+    <view class="weui-input"><text style="width: 100px; text-align: right;">申请部门：</text><text style="width: 240px;">{{item.department}}</text></view>
+    <view class="weui-input"><text style="width: 100px; text-align: right;">抄送人：</text><text style="width: 240px;">{{item.cc}}</text></view>
+    <view class="weui-input"><text style="width: 100px; text-align: right;">状态：</text><text style="width: 240px;">{{item.status}}</text></view>
+    </view>
+</fui-collapse-item>

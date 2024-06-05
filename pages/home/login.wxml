@@ -1,0 +1,13 @@
+<view class="title-text">
+   提前申请  及时归还 
+</view>
+<view class="title-text">
+   爱惜车辆  注意安全
+</view>
+
+<view class="img">
+    <image class="imgview" src="https://wxmp.chester.plus/images/car.jpg" style="position: relative; left: 0rpx; top: 336rpx"></image>
+</view>
+<view>
+   <button class="bottom" bindtap="getUI"type='primary' wx:if="{{canlog}}" style="position: relative; left: 0rpx; top: 480rpx">进入</button><!-- 授权登录按钮 -->
+</view>
